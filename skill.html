@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="MYpersonal.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<title>Skill Page</title>
+</head>
+<body class="inner-page skill-page">
+<header class="hero-banner">
+	<h1 id="Welcome">Welcome To My Portfolio</h1>
+	<p class="subheading">Explore my technical strengths, creative abilities, and computer science background.</p>
+</header>
+
+<nav><button id="menu-toggle">&#9776;</button><button id="dark-mode">&#127769;</button>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about-me.html">About Me</a></li>
+		<li><a href="skill.html">Skills</a></li>
+		<li><a href="Gallery.html">Projects</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+</nav>
+
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("nav ul");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+
+const darkBtn = document.getElementById("dark-mode");
+
+darkBtn.addEventListener("click", () => {
+	document.body.classList.toggle("dark-mode");
+});
+</script>
+
+<section class="skills-hero">
+	<div class="skills-hero-text">
+		<p class="skills-tag">Computer Science Student Profile</p>
+		<h1 class="mysikll">My Skills</h1>
+		<p class="skills-intro">I am building a strong foundation in computer science with practical experience in web development, software tools, problem solving, and digital creativity. This page highlights the core skills a computer science student learns and the areas I continue to grow in.</p>
+		<div class="skills-summary">
+			<span>Programming</span>
+			<span>Data Structures</span>
+			<span>Databases</span>
+			<span>Networking</span>
+			<span>UI Design</span>
+			<span>Creative Tools</span>
+		</div>
+	</div>
+	<div class="skills-hero-photo">
+		<img id="dagi3" src="dagi3.jpg" alt="Dagim profile photo">
+	</div>
+</section>
+
+<section class="skills-board">
+	<article class="skill-category-card">
+		<h2><i class="fa-solid fa-code"></i> Programming Fundamentals</h2>
+		<p>Writing clean logic, understanding syntax, debugging errors, and solving coding problems step by step.</p>
+		<div class="skills-grid custom-skills-grid">
+			<div class="skill-card"><div class="skill-title"><i class="fa-brands fa-html5"></i> HTML</div><div class="progress-bar"><div class="progress" style="width:88%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-brands fa-css3-alt"></i> CSS</div><div class="progress-bar"><div class="progress" style="width:80%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-brands fa-js"></i> JavaScript</div><div class="progress-bar"><div class="progress" style="width:58%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-laptop-code"></i> C++ / Java Basics</div><div class="progress-bar"><div class="progress" style="width:62%"></div></div></div>
+		</div>
+	</article>
+
+	<article class="skill-category-card">
+		<h2><i class="fa-solid fa-sitemap"></i> Core Computer Science</h2>
+		<p>Important concepts every computer science student studies to understand how software and systems work.</p>
+		<div class="custom-skill-list">
+			<span>Data Structures</span>
+			<span>Algorithms</span>
+			<span>Object-Oriented Programming</span>
+			<span>Operating Systems Basics</span>
+			<span>Computer Networks</span>
+			<span>Database Concepts</span>
+			<span>Software Engineering</span>
+			<span>System Analysis</span>
+		</div>
+	</article>
+
+	<article class="skill-category-card">
+		<h2><i class="fa-solid fa-globe"></i> Web Development Skills</h2>
+		<p>Building modern full-stack web apps with the kind of tools and workflows widely used in 2026, from frontend UI systems to backend APIs and deployment-ready project structure.</p>
+		<div class="custom-skill-list">
+			<span>React</span>
+			<span>Next.js App Router</span>
+			<span>TypeScript</span>
+			<span>Tailwind CSS</span>
+			<span>REST API Integration</span>
+			<span>Responsive UI</span>
+			<span>Authentication Basics</span>
+			<span>Performance Optimization</span>
+		</div>
+		<div class="skills-grid custom-skills-grid">
+			<div class="skill-card"><div class="skill-title"><i class="fa-brands fa-react"></i> React Components</div><div class="progress-bar"><div class="progress" style="width:70%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-layer-group"></i> Next.js Full-Stack Apps</div><div class="progress-bar"><div class="progress" style="width:64%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-code"></i> TypeScript Basics</div><div class="progress-bar"><div class="progress" style="width:55%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-paintbrush"></i> Tailwind And UI Styling</div><div class="progress-bar"><div class="progress" style="width:68%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-plug"></i> APIs And Data Fetching</div><div class="progress-bar"><div class="progress" style="width:66%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-rocket"></i> Deploy And Optimize</div><div class="progress-bar"><div class="progress" style="width:60%"></div></div></div>
+		</div>
+	</article>
+
+	<article class="skill-category-card">
+		<h2><i class="fa-solid fa-database"></i> Databases And Data</h2>
+		<p>Understanding how information is stored, organized, queried, and managed in software systems.</p>
+		<div class="custom-skill-list">
+			<span>SQL Basics</span>
+			<span>Tables and Relationships</span>
+			<span>ER Diagrams</span>
+			<span>Normalization Basics</span>
+			<span>Data Entry Forms</span>
+			<span>Information Management</span>
+		</div>
+	</article>
+
+	<article class="skill-category-card">
+		<h2><i class="fa-solid fa-network-wired"></i> Networking And System Knowledge</h2>
+		<p>Learning how computers communicate, how networks are organized, and how systems are maintained.</p>
+		<div class="custom-skill-list">
+			<span>IP Address Basics</span>
+			<span>Client-Server Model</span>
+			<span>Internet Concepts</span>
+			<span>Hardware Awareness</span>
+			<span>System Installation Basics</span>
+			<span>Troubleshooting</span>
+		</div>
+	</article>
+
+	<article class="skill-category-card">
+		<h2><i class="fa-solid fa-people-group"></i> Software Engineering Skills</h2>
+		<p>Working like a professional developer by planning, documenting, testing, and improving software projects.</p>
+		<div class="custom-skill-list">
+			<span>Requirement Analysis</span>
+			<span>Problem Solving</span>
+			<span>Testing Basics</span>
+			<span>Documentation</span>
+			<span>Version Control Basics</span>
+			<span>Team Collaboration</span>
+		</div>
+	</article>
+
+	<article class="skill-category-card">
+		<h2><i class="fa-solid fa-toolbox"></i> Productivity And Tools</h2>
+		<p>Tools that support studying, development work, and project delivery.</p>
+		<div class="skills-grid custom-skills-grid">
+			<div class="skill-card"><div class="skill-title"><i class="fa-brands fa-git-alt"></i> Git Basics</div><div class="progress-bar"><div class="progress" style="width:60%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-file-code"></i> VS Code</div><div class="progress-bar"><div class="progress" style="width:82%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-palette"></i> Figma Basics</div><div class="progress-bar"><div class="progress" style="width:65%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-terminal"></i> Command Line</div><div class="progress-bar"><div class="progress" style="width:55%"></div></div></div>
+		</div>
+	</article>
+
+	<article class="skill-category-card">
+		<h2><i class="fa-solid fa-photo-film"></i> Creative And Multimedia Skills</h2>
+		<p>Combining technical study with visual storytelling, editing, and branding skills.</p>
+		<div class="skills-grid custom-skills-grid">
+			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-image"></i> Adobe Photoshop</div><div class="progress-bar"><div class="progress" style="width:78%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-film"></i> Adobe Premiere</div><div class="progress-bar"><div class="progress" style="width:74%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-pen-nib"></i> Adobe Illustrator</div><div class="progress-bar"><div class="progress" style="width:72%"></div></div></div>
+			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-scissors"></i> CapCut</div><div class="progress-bar"><div class="progress" style="width:85%"></div></div></div>
+		</div>
+	</article>
+</section>
+
+<section class="skills-closing">
+	<h2>Growing Every Semester</h2>
+	<p>I continue improving through coursework, practice projects, online learning, and hands-on portfolio work. My goal is to keep building strong software skills while combining them with creativity and real-world problem solving.</p>
+</section>
+
+</body>
+</html>

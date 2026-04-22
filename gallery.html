@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="MYpersonal.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<title>Projects Page</title>
+</head>
+<body class="inner-page projects-page">
+<header class="hero-banner">
+	<h1 id="Welcome">Welcome To My Portfolio</h1>
+	<p class="subheading">A focused view of the websites, creative work, and digital solutions I am building.</p>
+</header>
+
+<nav><button id="menu-toggle">&#9776;</button><button id="dark-mode">&#127769;</button>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about-me.html">About Me</a></li>
+		<li><a href="skill.html">Skills</a></li>
+		<li><a href="Gallery.html">Projects</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+</nav>
+
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("nav ul");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+
+const darkBtn = document.getElementById("dark-mode");
+
+darkBtn.addEventListener("click", () => {
+	document.body.classList.toggle("dark-mode");
+});
+</script>
+
+<section class="projects-hero">
+	<div class="projects-copy">
+		<p class="projects-label">Selected Work</p>
+		<h1 class="projects-title">My Projects</h1>
+		<p class="projects-intro">This page highlights the kind of work I create as a Computer Science student, web developer, and creative designer. I focus on practical MERN stack systems, responsive interfaces, strong presentation, and real-world digital solutions.</p>
+		<div class="projects-tags">
+			<span>MERN Stack</span>
+			<span>MongoDB</span>
+			<span>Express.js</span>
+			<span>React</span>
+			<span>Node.js</span>
+			<span>Student Projects</span>
+		</div>
+	</div>
+	<div class="projects-highlight">
+		<div class="project-highlight-card">
+			<p class="project-status">Featured</p>
+			<h2>Online Examination And Result Management System</h2>
+			<p>A full MERN stack platform designed to manage online exams, student participation, grading workflows, and result publishing in one structured system.</p>
+			<div class="project-metrics">
+				<span>MongoDB</span>
+				<span>Express</span>
+				<span>React</span>
+				<span>Node.js</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="projects-grid">
+	<article class="project-card">
+		<div class="project-topline">
+			<span class="project-type">MERN Project</span>
+			<span class="project-year">2026</span>
+		</div>
+		<h2>Online Examination And Result Management System</h2>
+		<p>A web-based examination platform that helps manage exams, students, results, and academic records through a modern MERN stack architecture.</p>
+		<div class="project-stack">
+			<span>MongoDB</span>
+			<span>Express.js</span>
+			<span>React</span>
+			<span>Node.js</span>
+		</div>
+		<div class="project-actions">
+			<a href="contact.html" class="button">Request Demo</a>
+			<a href="contact.html" class="button project-secondary">Ask Details</a>
+		</div>
+	</article>
+
+	<article class="project-card">
+		<div class="project-topline">
+			<span class="project-type">MERN Project</span>
+			<span class="project-year">2026</span>
+		</div>
+		<h2>E-Commerce Web Application</h2>
+		<p>An online shopping platform developed with the MERN stack to support product browsing, cart management, ordering flow, and user-friendly storefront experiences.</p>
+		<div class="project-stack">
+			<span>MongoDB</span>
+			<span>Express.js</span>
+			<span>React</span>
+			<span>Node.js</span>
+		</div>
+		<div class="project-actions">
+			<a href="contact.html" class="button">Request Demo</a>
+			<a href="contact.html" class="button project-secondary">Ask Details</a>
+		</div>
+	</article>
+
+	<article class="project-card">
+		<div class="project-topline">
+			<span class="project-type">Portfolio Project</span>
+			<span class="project-year">2026</span>
+		</div>
+		<h2>Personal Portfolio Website</h2>
+		<p>A personal portfolio website created to present my profile, skills, projects, and contact information in a clear and professional format.</p>
+		<div class="project-stack">
+			<span>HTML</span>
+			<span>CSS</span>
+			<span>JavaScript</span>
+			<span>Responsive Design</span>
+		</div>
+		<div class="project-actions">
+			<a href="index.html" class="button">View Home</a>
+			<a href="about-me.html" class="button project-secondary">About Me</a>
+		</div>
+	</article>
+
+	<article class="project-card">
+		<div class="project-topline">
+			<span class="project-type">Contact Flow</span>
+			<span class="project-year">2026</span>
+		</div>
+		<h2>Contact And Personal Branding</h2>
+		<p>A contact page designed to make communication simple through direct links, a message form, and clean personal branding for freelance or collaboration opportunities.</p>
+		<div class="project-stack">
+			<span>Forms</span>
+			<span>Branding</span>
+			<span>Accessibility</span>
+			<span>User Flow</span>
+		</div>
+		<div class="project-actions">
+			<a href="contact.html" class="button">Contact Page</a>
+			<a href="contact.html" class="button project-secondary">Details</a>
+		</div>
+	</article>
+
+	<article class="project-card">
+		<div class="project-topline">
+			<span class="project-type">Creative Work</span>
+			<span class="project-year">2026</span>
+		</div>
+		<h2>Graphics And Video Editing</h2>
+		<p>Creative design work that supports digital storytelling, visual identity, and presentation. This includes graphic layouts, edited visuals, and multimedia content.</p>
+		<div class="project-stack">
+			<span>Photoshop</span>
+			<span>Illustrator</span>
+			<span>Premiere</span>
+			<span>CapCut</span>
+		</div>
+		<div class="project-actions">
+			<a href="contact.html" class="button">Request Work</a>
+			<a href="contact.html" class="button project-secondary">Portfolio Use</a>
+		</div>
+	</article>
+
+	<article class="project-card project-card-accent">
+		<div class="project-topline">
+			<span class="project-type">Student Project</span>
+			<span class="project-year">2026</span>
+		</div>
+		<h2>Responsive Web Practice</h2>
+		<p>A growing collection of practice pages and experiments built to improve layout control, interface consistency, coding confidence, and frontend problem solving.</p>
+		<div class="project-stack">
+			<span>Practice Builds</span>
+			<span>Mobile Friendly</span>
+			<span>Clean UI</span>
+			<span>Iteration</span>
+		</div>
+		<div class="project-actions">
+			<a href="index.html" class="button">See Portfolio</a>
+			<a href="contact.html" class="button project-secondary">More Soon</a>
+		</div>
+	</article>
+</section>
+
+<section class="projects-cta">
+	<h2>Want a real project added here?</h2>
+	<p>As you finish more websites or client work, this page can be updated with live links, GitHub links, screenshots, and short case studies for each project.</p>
+	<div class="cta-buttons">
+		<a href="contact.html" class="button">Contact Me</a>
+		<a href="index.html" class="button">Back to Home</a>
+	</div>
+</section>
+
+</body>
+</html>

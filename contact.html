@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="MYpersonal.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+	<title>Contact Page</title>
+</head>
+<body class="inner-page" style="background-color:darkblue ;">
+<header class="hero-banner">
+	<h1 id="Welcome">Welcome To My Portfolio</h1>
+	<p class="subheading">Welcome! Explore my projects, skills, and contact information.</p>
+</header>
+
+<nav><button id="menu-toggle">â˜°</button><button id="dark-mode">ðŸŒ™</button>
+	
+
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about-me.html">About Me</a></li>
+		<li><a href="skill.html">Skills</a></li>
+		<li><a href="Gallery.html">Projects</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+</nav>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("nav ul");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+const darkBtn = document.getElementById("dark-mode");
+
+darkBtn.addEventListener("click", ()=>{
+	document.body.classList.toggle("dark-mode");
+});
+</script>
+
+  <script type="text/javascript">
+ document.wirt("this message writeen by the java script"); </script>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <p>
+    <i class="fab fa-telegram"></i>
+    <a href="https://t.me/dagisho344" target="_blank">Contact on Telegram</a>
+  </p>
+
+  <p>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:dagimdanecho344@gmail.com" target="_blank">dagimdanecho344@gmail.com</a>
+  </p>
+
+  <p>
+    <i class="fas fa-phone"></i>
+    <a href="tel:+251986027835">+251 986 027 835</a>
+  </p>
+</section>
+
+<section id="contact-form">
+  <h2>Send Me a Message</h2>
+
+  <div action="#" method="post">
+
+    <div class="form-group">
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Enter your email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Your Comment:</label>
+      <textarea id="comment" name="comment" rows="4" required></textarea>
+    </div>
+     <script language="javascript" src="javascript.js"></script>
+
+    <button type="submit" class="submit-btn">Submit</button>
+
+  </div>
+</section>
+
+
+</body>
+</html>

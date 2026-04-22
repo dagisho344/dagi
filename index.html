@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="MYpersonal.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<title>Portfolio</title>
+</head>
+
+<body>
+
+<header class="hero-banner">
+	<h1 id="Welcome">Welcome To My Portfolio</h1>
+	<p class="subheading">Delivering modern web apps & creative design from concept to launch.</p>
+</header>
+
+<nav>
+	<button id="menu-toggle">☰</button>
+	<button id="dark-mode">🌙</button>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about-me.html">About Me</a></li>
+		<li><a href="skill.html">Skills</a></li>
+		<li><a href="Gallery.html">Projects</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+</nav>
+
+<section class="hero">
+	<div>
+		<h1 class="hh">👋 Hi, I'm <span id="dagi">DAGIM DANECHO</span></h1>
+		<h2 class="hh">Creative <span class="webdeveloper">Full-Stack Web Developer</span>, I specialize in building scalable <br>
+			<span class="veditor">web applications</span> and <span class="gdesigner">integrating AI-powered features.</span></h2>
+
+		
+	</div>
+	<div>
+		<img id="photo" src="image/dagi2.jpg" width="500" height="400" alt="A creative Workspace">
+	</div>
+</section>
+
+<!-- New recommendation: key skills + CTA section -->
+<section class="hero-cta">
+	<h2>My Core Skills</h2>
+	<p class="hero-cta-description">Here’s a quick overview of the tools and frameworks I use to build modern, responsive web experiences.</p>
+	<div class="skill-badges">
+		<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noreferrer"><i class="fab fa-html5"></i> HTML</a>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer"><i class="fab fa-css3-alt"></i> CSS</a>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><i class="fab fa-js"></i> JavaScript</a>
+		<a href="https://react.dev/" target="_blank" rel="noreferrer"><i class="fab fa-react"></i> React</a>
+		<a href="https://git-scm.com/" target="_blank" rel="noreferrer"><i class="fab fa-git-alt"></i> Git</a>
+		<a href="https://www.figma.com/" target="_blank" rel="noreferrer"><i class="fab fa-figma"></i> Figma</a>
+	</div>
+	<div class="cta-buttons">
+		<a href="about-me.html" class="button">Read My Story</a>
+		<a href="contact.html" class="button">Hire Me</a>
+		<a href="#" class="button">Download CV</a>
+	</div>
+</section>
+
+<footer>
+	<div class="footer-top">
+		<div class="footer-brand">
+			<h3>Dagim Denecho</h3>
+			<p>Full-Stack Web Developer | Designer</p>
+		</div>
+		<div class="footer-links">
+			<h4>Quick Links</h4>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about-me.html">About</a></li>
+				<li><a href="skill.html">Skills</a></li>
+				<li><a href="Gallery.html">Projects</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<div class="footer-contact">
+			<h4>Contact</h4>
+			<p><i class="fas fa-envelope"></i> <a href="mailto:dagimdanecho344@gmail.com">dagimdanecho344@gmail.com</a></p>
+			<p><i class="fas fa-phone"></i> <a href="tel:+251986027835">+251 986 027 835</a></p>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<p>&copy; 2026 Dagim Denecho. All rights reserved.</p>
+		<div class="social-links">
+			<a href="#" class="fab fa-facebook"></a>
+			<a href="#" class="fab fa-twitter"></a>
+			<a href="#" class="fab fa-linkedin"></a>
+			<a href="#" class="fab fa-github"></a>
+		</div>
+	</div>
+</footer>
+
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("nav ul");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+
+const darkBtn = document.getElementById("dark-mode");
+
+darkBtn.addEventListener("click", () => {
+	document.body.classList.toggle("dark-mode");
+});
+</script>
+
+</body>
+</html>
