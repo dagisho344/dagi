@@ -5,75 +5,191 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="MYpersonal.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	<title>About Me Page</title>
+	<title>About Me | Dagim Danecho</title>
 </head>
 <body class="inner-page">
 <header class="hero-banner">
 	<h1 id="Welcome">Welcome To My Portfolio</h1>
 	<p class="subheading">Learn more about who I am, what I do, and the direction I am growing in.</p>
+	<div class="scroll-indicator">
+		<span>Explore My Story</span>
+		<i class="fas fa-chevron-down"></i>
+	</div>
 </header>
 
-<nav><button id="menu-toggle">&#9776;</button><button id="dark-mode">&#127769;</button>
+<nav>
+	<button id="menu-toggle" aria-label="Toggle menu">☰</button>
+	<button id="dark-mode" aria-label="Toggle dark mode">🌙</button>
 	<ul>
 		<li><a href="index.html">Home</a></li>
-		<li><a href="about-me.html">About Me</a></li>
+		<li><a href="about-me.html" class="active">About Me</a></li>
 		<li><a href="skill.html">Skills</a></li>
 		<li><a href="gallery.html">Projects</a></li>
 		<li><a href="contact.html">Contact</a></li>
 	</ul>
 </nav>
 
-<script>
-const toggle = document.getElementById("menu-toggle");
-const nav = document.querySelector("nav ul");
-
-toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
-
-const darkBtn = document.getElementById("dark-mode");
-
-darkBtn.addEventListener("click", () => {
-	document.body.classList.toggle("dark-mode");
-});
-</script>
-
 <div class="about_me">
-	<div class="about-item">
-		<img src="dagi4.jpg" alt="Dagim Denecho portrait" width="300" height="300">
+	<div class="about-item about-profile">
+		<div class="profile-image-wrapper">
+			<img src="dagi4.jpg" alt="Dagim Denecho portrait">
+			<div class="profile-status">
+				<span class="status-dot"></span>
+				<span>Available for work</span>
+			</div>
+		</div>
+		<div class="profile-social-links">
+			<a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+			<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+			<a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+			<a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+		</div>
 	</div>
-	<div class="about-item">
-		<p>My name is <span id="dagi">Dagim</span>. I am a creative <span class="webdeveloper">full-stack web developer</span> with strong interest in modern websites, user-friendly digital experiences, and practical technology solutions.<!-- I also work in <!.. <span class="veditor">video editing</span> and ..> <span class="gdesigner">graphic design</span>, which helps me combine technical skill with visual creativity.--></p>
+	
+	<div class="about-item about-intro">
+		<div class="intro-badge">👋 About Me</div>
+		<p>My name is <span id="dagi">Dagim</span>. I am a creative <span class="webdeveloper">full-stack web developer</span> with strong interest in modern websites, user-friendly digital experiences, and practical technology solutions.</p>
+		<div class="intro-tags">
+			<span><i class="fas fa-code"></i> Full-Stack</span>
+			<span><i class="fas fa-mobile-alt"></i> Responsive</span>
+			<span><i class="fas fa-brain"></i> AI-Powered</span>
+			<span><i class="fas fa-rocket"></i> Innovative</span>
+		</div>
 	</div>
-	<div class="about-item">
+	
+	<div class="about-item about-education">
 		<section class="about-section">
 			<h2><i class="fas fa-graduation-cap"></i> Education</h2>
-			<p>I am studying Computer Science and building a solid foundation in programming, web development, databases,software engineering, and problem solving. My learning journey is focused on both theory and more real practice so I can grow into a strong professional developer.</p>
+			<div class="timeline">
+				<div class="timeline-item">
+					<div class="timeline-dot"></div>
+					<div class="timeline-content">
+						<h3>Computer Science</h3>
+						<p class="timeline-date">2022 - Present</p>
+						<p>Building a solid foundation in programming, web development, databases, software engineering, and problem solving.</p>
+					</div>
+				</div>
+				<div class="timeline-item">
+					<div class="timeline-dot"></div>
+					<div class="timeline-content">
+						<h3>Web Development</h3>
+						<p class="timeline-date">2023 - Present</p>
+						<p>Specializing in modern frameworks, responsive design, and full-stack application development.</p>
+					</div>
+				</div>
+			</div>
 		</section>
 	</div>
-	<div class="about-item">
+	
+	<div class="about-item about-work">
 		<section class="about-section">
 			<h2><i class="fas fa-briefcase"></i> What I Do</h2>
-			<p>🚀 I build modern websites!
-
-Need a portfolio or business website?
-I create clean, responsive, and professional designs.</p>
+			<div class="work-grid">
+				<div class="work-item">
+					<i class="fas fa-globe"></i>
+					<h3>Web Development</h3>
+					<p>Full-stack applications with modern frameworks</p>
+				</div>
+				<div class="work-item">
+					<i class="fas fa-paint-brush"></i>
+					<h3>UI/UX Design</h3>
+					<p>Clean, responsive, and professional designs</p>
+				</div>
+				<div class="work-item">
+					<i class="fas fa-database"></i>
+					<h3>Database Management</h3>
+					<p>Efficient data storage and retrieval systems</p>
+				</div>
+			</div>
 		</section>
 	</div>
-	<div class="about-item">
+	
+	<div class="about-item about-interests">
 		<section class="about-section">
 			<h2><i class="fas fa-heart"></i> Interests</h2>
-			<p>I enjoy learning new technologies, improving my design style, exploring modern web stacks, and turning ideas into working digital products. I am especially interested in projects that combine software, creativity, and real-world impact.</p>
+			<div class="interests-grid">
+				<div class="interest-item">
+					<i class="fas fa-code"></i>
+					<span>Coding</span>
+				</div>
+				<div class="interest-item">
+					<i class="fas fa-palette"></i>
+					<span>Design</span>
+				</div>
+				<div class="interest-item">
+					<i class="fas fa-robot"></i>
+					<span>AI</span>
+				</div>
+				<div class="interest-item">
+					<i class="fas fa-cloud"></i>
+					<span>Cloud</span>
+				</div>
+				<div class="interest-item">
+					<i class="fas fa-music"></i>
+					<span>Music</span>
+				</div>
+				<div class="interest-item">
+					<i class="fas fa-book"></i>
+					<span>Reading</span>
+				</div>
+			</div>
 		</section>
 	</div>
-	<div class="about-item">
+	
+	<div class="about-item about-goal">
 		<section class="about-section">
 			<h2><i class="fas fa-bullseye"></i> My Goal</h2>
 			<p>My goal is to keep growing as a developer who can design, build, and improve useful web applications. I want to strengthen my technical skills, work on meaningful projects, and create a portfolio that reflects my creative identity.</p>
 			<blockquote>"Keep learning, keep building, and let your work speak for you."</blockquote>
+			<div class="goal-stats">
+				<div class="goal-stat">
+					<span class="goal-number" data-target="50">0</span>
+					<span class="goal-label">Projects Goal</span>
+				</div>
+				<div class="goal-stat">
+					<span class="goal-number" data-target="30">0</span>
+					<span class="goal-label">Happy Clients</span>
+				</div>
+				<div class="goal-stat">
+					<span class="goal-number" data-target="5">0</span>
+					<span class="goal-label">Years Experience</span>
+				</div>
+			</div>
 		</section>
 	</div>
 </div>
+
+<!-- Fun Facts Section -->
+<section class="fun-facts">
+	<div class="container">
+		<div class="section-header">
+			<span class="section-tag">Fun Facts</span>
+			<h2>More About Me</h2>
+		</div>
+		<div class="facts-grid">
+			<div class="fact-card">
+				<div class="fact-icon">🌍</div>
+				<h3>Travel</h3>
+				<p>Visited 5+ countries</p>
+			</div>
+			<div class="fact-card">
+				<div class="fact-icon">☕</div>
+				<h3>Coffee</h3>
+				<p>4 cups per day</p>
+			</div>
+			<div class="fact-card">
+				<div class="fact-icon">💻</div>
+				<h3>Projects</h3>
+				<p>15+ completed</p>
+			</div>
+			<div class="fact-card">
+				<div class="fact-icon">🎯</div>
+				<h3>Focus</h3>
+				<p>Clean Code</p>
+			</div>
+		</div>
+	</div>
+</section>
 
 <section class="hero-cta">
 	<h2>My Core Skills</h2>
@@ -82,10 +198,10 @@ I create clean, responsive, and professional designs.</p>
 		<span><i class="fab fa-html5"></i> HTML</span>
 		<span><i class="fab fa-css3-alt"></i> CSS</span>
 		<span><i class="fab fa-js"></i> JavaScript</span>
-		<span><i class="fab fa-php"></i>Php</span>
+		<span><i class="fab fa-php"></i> PHP</span>
 		<span><i class="fab fa-react"></i> React</span>
 		<span><i class="fab fa-git-alt"></i> Git</span>
-		<!--<span><i class="fab fa-figma"></i> Figma</span>-->
+		<span><i class="fab fa-figma"></i> Figma</span>
 	</div>
 	<div class="cta-buttons">
 		<a href="index.html" class="button">Back to Home</a>
@@ -95,14 +211,167 @@ I create clean, responsive, and professional designs.</p>
 </section>
 
 <footer>
-	<p>&copy; 2026 Dagim Denecho. All rights reserved.</p>
-	<div class="social-links">
-		<a href="#" class="fab fa-facebook"></a>
-		<a href="#" class="fab fa-twitter"></a>
-		<a href="#" class="fab fa-linkedin"></a>
-		<a href="#" class="fab fa-github"></a>
+	<div class="footer-top">
+		<div class="footer-brand">
+			<h3>Dagim Denecho</h3>
+			<p>Full-Stack Web Developer</p>
+		</div>
+		<div class="footer-links">
+			<h4>Quick Links</h4>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about-me.html">About</a></li>
+				<li><a href="skill.html">Skills</a></li>
+				<li><a href="gallery.html">Projects</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<div class="footer-contact">
+			<h4>Contact</h4>
+			<p><i class="fas fa-envelope"></i> <a href="mailto:dagimdanecho344@gmail.com">dagimdanecho344@gmail.com</a></p>
+			<p><i class="fas fa-phone"></i> <a href="tel:+251986027835">+251 986 027 835</a></p>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<p>&copy; 2026 Dagim Denecho. All rights reserved.</p>
+		<div class="social-links">
+			<a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+			<a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+			<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+			<a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+		</div>
 	</div>
 </footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Back to top">
+	<i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+// Mobile Menu Toggle
+const toggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("nav ul");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+
+// Dark Mode Toggle
+const darkBtn = document.getElementById("dark-mode");
+
+darkBtn.addEventListener("click", () => {
+	document.body.classList.toggle("dark-mode");
+	darkBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+});
+
+// Close mobile menu on link click
+document.querySelectorAll('nav ul li a').forEach(link => {
+	link.addEventListener('click', () => {
+		if (window.innerWidth <= 768) {
+			nav.classList.remove('active');
+		}
+	});
+});
+
+// Animated Stats Counter
+const stats = document.querySelectorAll('.goal-number');
+
+const animateStats = () => {
+	stats.forEach(stat => {
+		const target = parseInt(stat.getAttribute('data-target'));
+		const current = parseInt(stat.textContent);
+		const increment = Math.ceil(target / 60);
+		
+		if (current < target) {
+			const newValue = Math.min(current + increment, target);
+			stat.textContent = newValue;
+			setTimeout(animateStats, 30);
+		}
+	});
+};
+
+// Start stats animation when visible
+const observerOptions = {
+	threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			stats.forEach(stat => stat.textContent = '0');
+			animateStats();
+		}
+	});
+}, observerOptions);
+
+document.querySelectorAll('.goal-stat').forEach(el => {
+	observer.observe(el);
+});
+
+// Back to Top Button
+const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+	if (window.scrollY > 300) {
+		backToTopBtn.classList.add('visible');
+	} else {
+		backToTopBtn.classList.remove('visible');
+	}
+});
+
+backToTopBtn.addEventListener('click', () => {
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Scroll Reveal Animation
+const revealElements = document.querySelectorAll('.about-item, .fact-card, .work-item, .interest-item, .timeline-item');
+
+const revealObserver = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('revealed');
+		}
+	});
+}, {
+	threshold: 0.1,
+	rootMargin: '0px 0px -30px 0px'
+});
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+// Add smooth scroll to all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function(e) {
+		const href = this.getAttribute('href');
+		if (href !== '#') {
+			e.preventDefault();
+			const target = document.querySelector(href);
+			if (target) {
+				target.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	});
+});
+
+// Typing effect for subtitle (optional)
+const subtitle = document.querySelector('.subheading');
+if (subtitle) {
+	const text = subtitle.textContent;
+	subtitle.textContent = '';
+	let i = 0;
+	const typeSubtitle = () => {
+		if (i < text.length) {
+			subtitle.textContent += text.charAt(i);
+			i++;
+			setTimeout(typeSubtitle, 30);
+		}
+	};
+	// Only run if not already typed (check if text exists)
+	if (text) {
+		setTimeout(typeSubtitle, 500);
+	}
+}
+</script>
 </body>
 </html>
