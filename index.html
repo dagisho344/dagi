@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="MYpersonal.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	<title>Portfolio</title>
+	<title>Dagim Danecho | Portfolio</title>
 </head>
 
 <body>
@@ -13,13 +13,17 @@
 <header class="hero-banner">
 	<h1 id="Welcome">Welcome To My Portfolio</h1>
 	<p class="subheading">Delivering modern web apps & creative design from concept to launch.</p>
+	<div class="scroll-indicator">
+		<span>Scroll Down</span>
+		<i class="fas fa-chevron-down"></i>
+	</div>
 </header>
 
 <nav>
-	<button id="menu-toggle">☰</button>
-	<button id="dark-mode">🌙</button>
+	<button id="menu-toggle" aria-label="Toggle menu">☰</button>
+	<button id="dark-mode" aria-label="Toggle dark mode">🌙</button>
 	<ul>
-		<li><a href="index.html">Home</a></li>
+		<li><a href="index.html" class="active">Home</a></li>
 		<li><a href="about-me.html">About Me</a></li>
 		<li><a href="skill.html">Skills</a></li>
 		<li><a href="gallery.html">Projects</a></li>
@@ -28,30 +32,133 @@
 </nav>
 
 <section class="hero">
-	<div>
-		<h1 class="hh">👋 Hi, I'm <span id="dagi">DAGIM DANECHO</span></h1>
-		<h2 class="hh">Creative <span class="webdeveloper">Full-Stack Web Developer</span>, I specialize in building scalable <br>
-			<span class="veditor">web applications</span> and <span class="gdesigner">integrating AI-powered features.</span></h2>
-
-		
-	</div>
-	<div>
-		<img id="photo" src="dagi2.jpg" width="500" height="400" alt="A creative Workspace">
+	<div class="hero-content">
+		<div class="hero-text">
+			<span class="badge">Available for Work</span>
+			<h1 class="hh">👋 Hi, I'm <span id="dagi">DAGIM DANECHO</span></h1>
+			<h2 class="hh">Creative <span class="webdeveloper">Full-Stack Web Developer</span><br>
+				<span class="typed-text"></span></h2>
+			<div class="hero-stats">
+				<div class="stat">
+					<span class="stat-number" data-target="2">0</span>
+					<span class="stat-label">Years Experience</span>
+				</div>
+				<div class="stat">
+					<span class="stat-number" data-target="15">0</span>
+					<span class="stat-label">Projects Completed</span>
+				</div>
+				<div class="stat">
+					<span class="stat-number" data-target="10">0</span>
+					<span class="stat-label">Happy Clients</span>
+				</div>
+			</div>
+			<div class="hero-actions">
+				<a href="contact.html" class="button primary">Hire Me</a>
+				<a href="Dagim_Danecho_CV.pdf" class="button secondary">Download CV</a>
+			</div>
+		</div>
+		<div class="hero-image-wrapper">
+			<div class="hero-image-container">
+				<img id="photo" src="dagi2.jpg" alt="Dagim Danecho">
+				<div class="floating-badge">
+					<i class="fas fa-code"></i>
+					<span>Full-Stack</span>
+				</div>
+				<div class="floating-badge bottom">
+					<i class="fas fa-rocket"></i>
+					<span>AI-Powered</span>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
 
-<!-- New recommendation: key skills + CTA section -->
+<!-- Services Section -->
+<section class="services-section">
+	<div class="container">
+		<div class="section-header">
+			<span class="section-tag">What I Do</span>
+			<h2>My Services</h2>
+			<p>Transforming ideas into powerful digital solutions</p>
+		</div>
+		<div class="services-grid">
+			<div class="service-card">
+				<div class="service-icon">
+					<i class="fas fa-globe"></i>
+				</div>
+				<h3>Web Development</h3>
+				<p>Full-stack web applications with modern frameworks and responsive design.</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">
+					<i class="fas fa-mobile-alt"></i>
+				</div>
+				<h3>Mobile-First Design</h3>
+				<p>Responsive websites that work flawlessly across all devices and screen sizes.</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">
+					<i class="fas fa-brain"></i>
+				</div>
+				<h3>AI Integration</h3>
+				<p>Smart features powered by artificial intelligence to enhance user experience.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+	<div class="container">
+		<div class="section-header">
+			<span class="section-tag">Testimonials</span>
+			<h2>What People Say</h2>
+		</div>
+		<div class="testimonials-grid" id="testimonialsGrid">
+			<div class="testimonial-card active">
+				<i class="fas fa-quote-left"></i>
+				<p>"Dagim delivered an exceptional website that exceeded our expectations. His attention to detail and technical expertise are outstanding."</p>
+				<div class="testimonial-author">
+					<strong>John Smith</strong>
+					<span>CEO, TechCorp</span>
+				</div>
+			</div>
+			<div class="testimonial-card">
+				<i class="fas fa-quote-left"></i>
+				<p>"Working with Dagim was a pleasure. He understood our vision and brought it to life with clean code and beautiful design."</p>
+				<div class="testimonial-author">
+					<strong>Sarah Johnson</strong>
+					<span>Founder, CreativeStudio</span>
+				</div>
+			</div>
+			<div class="testimonial-card">
+				<i class="fas fa-quote-left"></i>
+				<p>"The AI-powered features Dagim implemented transformed our platform. Highly recommended for any web development project."</p>
+				<div class="testimonial-author">
+					<strong>Michael Chen</strong>
+					<span>CTO, DataFlow</span>
+				</div>
+			</div>
+		</div>
+		<div class="testimonial-controls">
+			<button class="testimonial-btn active" data-index="0"></button>
+			<button class="testimonial-btn" data-index="1"></button>
+			<button class="testimonial-btn" data-index="2"></button>
+		</div>
+	</div>
+</section>
+
+<!-- Core Skills + CTA -->
 <section class="hero-cta">
 	<h2>My Core Skills</h2>
-	<p class="hero-cta-description">Here’s a quick overview of the tools and frameworks I use to build modern, responsive web experiences.</p>
+	<p class="hero-cta-description">Here's a quick overview of the tools and frameworks I use to build modern, responsive web experiences.</p>
 	<div class="skill-badges">
 		<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noreferrer"><i class="fab fa-html5"></i> HTML</a>
 		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer"><i class="fab fa-css3-alt"></i> CSS</a>
 		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><i class="fab fa-js"></i> JavaScript</a>
-		<a href="https://developer.mozilla.org/en-US/docs/Web/PHP" target="_blank" rel="noreferrer"><i class="fab fa-html5"></i> PHP</a>
+		<a href="https://www.php.net/" target="_blank" rel="noreferrer"><i class="fab fa-php"></i> PHP</a>
 		<a href="https://react.dev/" target="_blank" rel="noreferrer"><i class="fab fa-react"></i> React</a>
 		<a href="https://git-scm.com/" target="_blank" rel="noreferrer"><i class="fab fa-git-alt"></i> Git</a>
-		<!--<a href="https://www.figma.com/" target="_blank" rel="noreferrer"><i class="fab fa-figma"></i> Figma</a>-->
 	</div>
 	<div class="cta-buttons">
 		<a href="about-me.html" class="button">Read My Story</a>
@@ -60,11 +167,24 @@
 	</div>
 </section>
 
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+	<div class="container">
+		<h2>Stay Updated</h2>
+		<p>Subscribe to get notified about my latest projects and tech insights</p>
+		<form id="newsletterForm">
+			<input type="email" placeholder="Enter your email" required>
+			<button type="submit" class="button">Subscribe</button>
+		</form>
+		<div id="newsletterMessage"></div>
+	</div>
+</section>
+
 <footer>
 	<div class="footer-top">
 		<div class="footer-brand">
 			<h3>Dagim Denecho</h3>
-			<p>Full-Stack Web Developer </p>
+			<p>Full-Stack Web Developer</p>
 		</div>
 		<div class="footer-links">
 			<h4>Quick Links</h4>
@@ -85,15 +205,22 @@
 	<div class="footer-bottom">
 		<p>&copy; 2026 Dagim Denecho. All rights reserved.</p>
 		<div class="social-links">
-			<a href="dagisho344" class="fab fa-facebook"></a>
-			<a href="#" class="fab fa-twitter"></a>
-			<a href="#" class="fab fa-linkedin"></a>
-			<a href="dagisho344" class="fab fa-github"></a>
+			<a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+			<a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+			<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+			<a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+			<a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
 		</div>
 	</div>
 </footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Back to top">
+	<i class="fas fa-arrow-up"></i>
+</button>
+
 <script>
+// Mobile Menu Toggle
 const toggle = document.getElementById("menu-toggle");
 const nav = document.querySelector("nav ul");
 
@@ -101,12 +228,183 @@ toggle.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
 
+// Dark Mode Toggle
 const darkBtn = document.getElementById("dark-mode");
 
 darkBtn.addEventListener("click", () => {
 	document.body.classList.toggle("dark-mode");
+	// Update icon
+	darkBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+});
+
+// Typing Effect
+const typedTexts = [
+	"I specialize in building scalable web applications",
+	"I integrate AI-powered features",
+	"I create responsive user interfaces",
+	"I solve complex problems with code"
+];
+let typedIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typedElement = document.querySelector('.typed-text');
+
+function typeEffect() {
+	const currentText = typedTexts[typedIndex];
+	
+	if (isDeleting) {
+		typedElement.textContent = currentText.substring(0, charIndex - 1);
+		charIndex--;
+	} else {
+		typedElement.textContent = currentText.substring(0, charIndex + 1);
+		charIndex++;
+	}
+	
+	if (!isDeleting && charIndex === currentText.length) {
+		isDeleting = true;
+		setTimeout(typeEffect, 2000);
+	} else if (isDeleting && charIndex === 0) {
+		isDeleting = false;
+		typedIndex = (typedIndex + 1) % typedTexts.length;
+		setTimeout(typeEffect, 500);
+	} else {
+		setTimeout(typeEffect, isDeleting ? 50 : 100);
+	}
+}
+
+typeEffect();
+
+// Animated Stats Counter
+const stats = document.querySelectorAll('.stat-number');
+
+const animateStats = () => {
+	stats.forEach(stat => {
+		const target = parseInt(stat.getAttribute('data-target'));
+		const current = parseInt(stat.textContent);
+		const increment = Math.ceil(target / 50);
+		
+		if (current < target) {
+			const newValue = Math.min(current + increment, target);
+			stat.textContent = newValue;
+			setTimeout(animateStats, 40);
+		}
+	});
+};
+
+// Start stats animation when visible
+const observerOptions = {
+	threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			stats.forEach(stat => stat.textContent = '0');
+			animateStats();
+		}
+	});
+}, observerOptions);
+
+document.querySelector('.hero-stats').forEach?.(el => {
+	if (el) observer.observe(el);
+});
+
+// Testimonials Carousel
+let currentTestimonial = 0;
+const testimonialCards = document.querySelectorAll('.testimonial-card');
+const testimonialBtns = document.querySelectorAll('.testimonial-btn');
+
+function showTestimonial(index) {
+	testimonialCards.forEach((card, i) => {
+		card.classList.toggle('active', i === index);
+	});
+	testimonialBtns.forEach((btn, i) => {
+		btn.classList.toggle('active', i === index);
+	});
+	currentTestimonial = index;
+}
+
+testimonialBtns.forEach(btn => {
+	btn.addEventListener('click', () => {
+		showTestimonial(parseInt(btn.getAttribute('data-index')));
+	});
+});
+
+// Auto-rotate testimonials
+setInterval(() => {
+	const next = (currentTestimonial + 1) % testimonialCards.length;
+	showTestimonial(next);
+}, 5000);
+
+// Newsletter Subscription
+document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+	e.preventDefault();
+	const email = this.querySelector('input[type="email"]').value;
+	const messageDiv = document.getElementById('newsletterMessage');
+	
+	if (email) {
+		messageDiv.textContent = '✅ Thank you for subscribing!';
+		messageDiv.style.color = '#33FF57';
+		this.querySelector('input[type="email"]').value = '';
+		setTimeout(() => {
+			messageDiv.textContent = '';
+		}, 3000);
+	}
+});
+
+// Back to Top Button
+const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+	if (window.scrollY > 300) {
+		backToTopBtn.classList.add('visible');
+	} else {
+		backToTopBtn.classList.remove('visible');
+	}
+});
+
+backToTopBtn.addEventListener('click', () => {
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Scroll Reveal Animation
+const revealElements = document.querySelectorAll('.service-card, .testimonial-card, .skill-badges a');
+
+const revealObserver = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('revealed');
+		}
+	});
+}, {
+	threshold: 0.1,
+	rootMargin: '0px 0px -50px 0px'
+});
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+// Add smooth scroll to all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function(e) {
+		const href = this.getAttribute('href');
+		if (href !== '#') {
+			e.preventDefault();
+			const target = document.querySelector(href);
+			if (target) {
+				target.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	});
+});
+
+// Close mobile menu on link click (for better UX)
+document.querySelectorAll('nav ul li a').forEach(link => {
+	link.addEventListener('click', () => {
+		if (window.innerWidth <= 768) {
+			nav.classList.remove('active');
+		}
+	});
 });
 </script>
-
 </body>
 </html>
