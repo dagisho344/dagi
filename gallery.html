@@ -5,187 +5,294 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="MYpersonal.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	<title>Projects Page</title>
+	<title>Projects | Dagim Danecho</title>
 </head>
-<body class="inner-page">
+<body class="inner-page projects-page">
 <header class="hero-banner">
 	<h1 id="Welcome">Welcome To My Portfolio</h1>
 	<p class="subheading">A focused view of the websites, creative work, and digital solutions I am building.</p>
+	<div class="scroll-indicator">
+		<span>Explore My Work</span>
+		<i class="fas fa-chevron-down"></i>
+	</div>
 </header>
 
-<nav><button id="menu-toggle">&#9776;</button><button id="dark-mode">&#127769;</button>
+<nav>
+	<button id="menu-toggle" aria-label="Toggle menu">☰</button>
+	<button id="dark-mode" aria-label="Toggle dark mode">🌙</button>
 	<ul>
 		<li><a href="index.html">Home</a></li>
 		<li><a href="about-me.html">About Me</a></li>
 		<li><a href="skill.html">Skills</a></li>
-		<li><a href="gallery.html">Projects</a></li>
+		<li><a href="gallery.html" class="active">Projects</a></li>
 		<li><a href="contact.html">Contact</a></li>
 	</ul>
 </nav>
 
-<script>
-const toggle = document.getElementById("menu-toggle");
-const nav = document.querySelector("nav ul");
-
-toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
-
-const darkBtn = document.getElementById("dark-mode");
-
-darkBtn.addEventListener("click", () => {
-	document.body.classList.toggle("dark-mode");
-});
-</script>
-
 <section class="projects-hero">
 	<div class="projects-copy">
-		<p class="projects-label">Selected Work</p>
+		<p class="projects-label"><i class="fas fa-rocket"></i> Selected Work</p>
 		<h1 class="projects-title">My Projects</h1>
 		<p class="projects-intro">This page highlights the kind of work I create as a Computer Science student, web developer, and creative designer. I focus on practical MERN stack systems, responsive interfaces, strong presentation, and real-world digital solutions.</p>
 		<div class="projects-tags">
-			<span>MERN Stack</span>
-			<span>MongoDB</span>
-			<span>Express.js</span>
-			<span>React</span>
-			<span>Node.js</span>
-			<span>Student Projects</span>
+			<span><i class="fas fa-code"></i> MERN Stack</span>
+			<span><i class="fas fa-database"></i> MongoDB</span>
+			<span><i class="fas fa-server"></i> Express.js</span>
+			<span><i class="fab fa-react"></i> React</span>
+			<span><i class="fab fa-node"></i> Node.js</span>
+			<span><i class="fas fa-graduation-cap"></i> Student Projects</span>
 		</div>
 	</div>
-	<!--<div class="projects-highlight">
+	<div class="projects-highlight">
 		<div class="project-highlight-card">
-			<p class="project-status">Featured</p>
-			<h2>Online Examination And Result Management System</h2>
+			<p class="project-status"><i class="fas fa-star"></i> Featured Project</p>
+			<h2>Online Examination & Result Management System</h2>
 			<p>A full MERN stack platform designed to manage online exams, student participation, grading workflows, and result publishing in one structured system.</p>
 			<div class="project-metrics">
+				<span><i class="fas fa-database"></i> MongoDB</span>
+				<span><i class="fas fa-server"></i> Express</span>
+				<span><i class="fab fa-react"></i> React</span>
+				<span><i class="fab fa-node"></i> Node.js</span>
+			</div>
+			<a href="https://online-exam-system-kappa.vercel.app" target="_blank" class="button primary">
+				<i class="fas fa-external-link-alt"></i> Live Demo
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- Project Filters -->
+<div class="project-filters">
+	<div class="container">
+		<button class="filter-btn active" data-filter="all">All Projects</button>
+		<button class="filter-btn" data-filter="mern">MERN Stack</button>
+		<button class="filter-btn" data-filter="frontend">Frontend</button>
+		<button class="filter-btn" data-filter="portfolio">Portfolio</button>
+		<button class="filter-btn" data-filter="creative">Creative</button>
+	</div>
+</div>
+
+<section class="projects-grid" id="projectsGrid">
+	<!-- Project 1 - MERN -->
+	<article class="project-card" data-category="mern">
+		<div class="project-image">
+			<img src="https://via.placeholder.com/400x250/0a1a4a/ffffff?text=Exam+System" alt="Online Examination System">
+			<div class="project-overlay">
+				<span class="project-badge">Featured</span>
+			</div>
+		</div>
+		<div class="project-content">
+			<div class="project-topline">
+				<span class="project-type"><i class="fas fa-code"></i> MERN Project</span>
+				<span class="project-year">2026</span>
+			</div>
+			<h2>Online Examination & Result Management System</h2>
+			<p>A web-based examination platform that helps manage exams, students, results, and academic records through a modern MERN stack architecture.</p>
+			<div class="project-stack">
 				<span>MongoDB</span>
-				<span>Express</span>
+				<span>Express.js</span>
 				<span>React</span>
 				<span>Node.js</span>
 			</div>
-		</div>-->
+			<div class="project-actions">
+				<a href="https://online-exam-system-kappa.vercel.app" target="_blank" class="button primary small">
+					<i class="fas fa-external-link-alt"></i> Live Demo
+				</a>
+				<a href="contact.html" class="button secondary small">
+					<i class="fas fa-info-circle"></i> Details
+				</a>
+			</div>
+		</div>
+	</article>
+
+	<!-- Project 2 - MERN -->
+	<article class="project-card" data-category="mern">
+		<div class="project-image">
+			<img src="https://via.placeholder.com/400x250/1a2a6a/ffffff?text=E-Commerce" alt="E-Commerce Application">
+			<div class="project-overlay">
+				<span class="project-badge">In Progress</span>
+			</div>
+		</div>
+		<div class="project-content">
+			<div class="project-topline">
+				<span class="project-type"><i class="fas fa-code"></i> MERN Project</span>
+				<span class="project-year">2026</span>
+			</div>
+			<h2>E-Commerce Web Application</h2>
+			<p>An online shopping platform developed with the MERN stack to support product browsing, cart management, ordering flow, and user-friendly storefront experiences.</p>
+			<div class="project-stack">
+				<span>MongoDB</span>
+				<span>Express.js</span>
+				<span>React</span>
+				<span>Node.js</span>
+				<span>Stripe</span>
+			</div>
+			<div class="project-actions">
+				<a href="contact.html" class="button primary small">
+					<i class="fas fa-rocket"></i> Request Demo
+				</a>
+				<a href="contact.html" class="button secondary small">
+					<i class="fas fa-info-circle"></i> Details
+				</a>
+			</div>
+		</div>
+	</article>
+
+	<!-- Project 3 - Portfolio -->
+	<article class="project-card" data-category="portfolio">
+		<div class="project-image">
+			<img src="https://via.placeholder.com/400x250/2a3a7a/ffffff?text=Portfolio" alt="Portfolio Website">
+			<div class="project-overlay">
+				<span class="project-badge">Completed</span>
+			</div>
+		</div>
+		<div class="project-content">
+			<div class="project-topline">
+				<span class="project-type"><i class="fas fa-user"></i> Portfolio</span>
+				<span class="project-year">2026</span>
+			</div>
+			<h2>Personal Portfolio Website</h2>
+			<p>A personal portfolio website created to present my profile, skills, projects, and contact information in a clear and professional format with modern animations.</p>
+			<div class="project-stack">
+				<span>HTML</span>
+				<span>CSS</span>
+				<span>JavaScript</span>
+				<span>Responsive</span>
+			</div>
+			<div class="project-actions">
+				<a href="index.html" class="button primary small">
+					<i class="fas fa-home"></i> View Home
+				</a>
+				<a href="about-me.html" class="button secondary small">
+					<i class="fas fa-user"></i> About Me
+				</a>
+			</div>
+		</div>
+	</article>
+
+	<!-- Project 4 - Frontend -->
+	<article class="project-card" data-category="frontend">
+		<div class="project-image">
+			<img src="https://via.placeholder.com/400x250/3a4a8a/ffffff?text=Responsive+Design" alt="Responsive Design">
+			<div class="project-overlay">
+				<span class="project-badge">Practice</span>
+			</div>
+		</div>
+		<div class="project-content">
+			<div class="project-topline">
+				<span class="project-type"><i class="fas fa-mobile-alt"></i> Frontend</span>
+				<span class="project-year">2026</span>
+			</div>
+			<h2>Responsive Web Design Practice</h2>
+			<p>A growing collection of practice pages and experiments built to improve layout control, interface consistency, coding confidence, and frontend problem solving.</p>
+			<div class="project-stack">
+				<span>HTML5</span>
+				<span>CSS3</span>
+				<span>Flexbox</span>
+				<span>Grid</span>
+				<span>Media Queries</span>
+			</div>
+			<div class="project-actions">
+				<a href="gallery.html" class="button primary small">
+					<i class="fas fa-images"></i> View Gallery
+				</a>
+				<a href="contact.html" class="button secondary small">
+					<i class="fas fa-info-circle"></i> Details
+				</a>
+			</div>
+		</div>
+	</article>
+
+	<!-- Project 5 - Creative -->
+	<article class="project-card" data-category="creative">
+		<div class="project-image">
+			<img src="https://via.placeholder.com/400x250/4a5a9a/ffffff?text=Creative+Design" alt="Creative Design">
+			<div class="project-overlay">
+				<span class="project-badge">Creative</span>
+			</div>
+		</div>
+		<div class="project-content">
+			<div class="project-topline">
+				<span class="project-type"><i class="fas fa-palette"></i> Creative</span>
+				<span class="project-year">2026</span>
+			</div>
+			<h2>Graphics & Video Editing</h2>
+			<p>Creative design work that supports digital storytelling, visual identity, and presentation. This includes graphic layouts, edited visuals, and multimedia content.</p>
+			<div class="project-stack">
+				<span>Photoshop</span>
+				<span>Illustrator</span>
+				<span>Premiere</span>
+				<span>CapCut</span>
+				<span>Figma</span>
+			</div>
+			<div class="project-actions">
+				<a href="contact.html" class="button primary small">
+					<i class="fas fa-briefcase"></i> Request Work
+				</a>
+				<a href="contact.html" class="button secondary small">
+					<i class="fas fa-info-circle"></i> Details
+				</a>
+			</div>
+		</div>
+	</article>
+
+	<!-- Project 6 - Frontend -->
+	<article class="project-card" data-category="frontend">
+		<div class="project-image">
+			<img src="https://via.placeholder.com/400x250/5a6aaa/ffffff?text=Interactive+UI" alt="Interactive UI">
+			<div class="project-overlay">
+				<span class="project-badge">Interactive</span>
+			</div>
+		</div>
+		<div class="project-content">
+			<div class="project-topline">
+				<span class="project-type"><i class="fas fa-play"></i> Interactive UI</span>
+				<span class="project-year">2026</span>
+			</div>
+			<h2>Interactive User Interfaces</h2>
+			<p>Modern web interfaces with animations, transitions, and interactive elements that enhance user experience and engagement.</p>
+			<div class="project-stack">
+				<span>JavaScript</span>
+				<span>CSS Animations</span>
+				<span>React</span>
+				<span>Framer Motion</span>
+			</div>
+			<div class="project-actions">
+				<a href="index.html" class="button primary small">
+					<i class="fas fa-eye"></i> View Demo
+				</a>
+				<a href="contact.html" class="button secondary small">
+					<i class="fas fa-info-circle"></i> Details
+				</a>
+			</div>
+		</div>
+	</article>
+</section>
+
+<!-- Project Stats -->
+<section class="project-stats">
+	<div class="container">
+		<div class="stats-grid">
+			<div class="stat-item">
+				<span class="stat-number" data-target="6">0</span>
+				<span class="stat-label">Total Projects</span>
+			</div>
+			<div class="stat-item">
+				<span class="stat-number" data-target="3">0</span>
+				<span class="stat-label">MERN Stack</span>
+			</div>
+			<div class="stat-item">
+				<span class="stat-number" data-target="2">0</span>
+				<span class="stat-label">Frontend</span>
+			</div>
+			<div class="stat-item">
+				<span class="stat-number" data-target="1">0</span>
+				<span class="stat-label">Creative</span>
+			</div>
+		</div>
 	</div>
 </section>
 
-<section class="projects-grid">
-	<article class="project-card">
-		<div class="project-topline">
-			<span class="project-type">MERN Project</span>
-			<span class="project-year">2026</span>
-		</div>
-		<h2>Online Examination And Result Management System</h2>
-		<p>A web-based examination platform that helps manage exams, students, results, and academic records through a modern MERN stack architecture.</p>
-		<div class="project-stack">
-			<span>MongoDB</span>
-			<span>Express.js</span>
-			<span>React</span>
-			<span>Node.js</span>
-		</div>
-		<div class="project-actions">
-			<a href="contact.html" class="button">Request Demo</a>
-			<a href="contact.html" class="button project-secondary">Ask Details</a>
-			<a href="https://online-exam-system-kappa.vercel.app" class="button project-secondary">You can view</a>
-		</div>
-	</article>
-
-	<article class="project-card">
-		<div class="project-topline">
-			<span class="project-type">MERN Project</span>
-			<span class="project-year">2026</span>
-		</div>
-		<h2>E-Commerce Web Application</h2>
-		<p>An online shopping platform developed with the MERN stack to support product browsing, cart management, ordering flow, and user-friendly storefront experiences.</p>
-		<div class="project-stack">
-			<span>MongoDB</span>
-			<span>Express.js</span>
-			<span>React</span>
-			<span>Node.js</span>
-		</div>
-		<div class="project-actions">
-			<a href="contact.html" class="button">Request Demo</a>
-			<a href="contact.html" class="button project-secondary">Ask Details</a>
-		</div>
-	</article>
-
-	<article class="project-card">
-		<div class="project-topline">
-			<span class="project-type">Portfolio Project</span>
-			<span class="project-year">2026</span>
-		</div>
-		<h2>Personal Portfolio Website</h2>
-		<p>A personal portfolio website created to present my profile, skills, projects, and contact information in a clear and professional format.</p>
-		<div class="project-stack">
-			<span>HTML</span>
-			<span>CSS</span>
-			<span>JavaScript</span>
-			<span>Responsive Design</span>
-		</div>
-		<div class="project-actions">
-			<a href="index.html" class="button">View Home</a>
-			<a href="about-me.html" class="button project-secondary">About Me</a>
-		</div>
-	</article>
-
-	<!--
-	<article class="project-card">
-		<div class="project-topline">
-			<span class="project-type">Contact Flow</span>
-			<span class="project-year">2026</span>
-		</div>
-		<h2>Contact And Personal Branding</h2>
-		<p>A contact page designed to make communication simple through direct links, a message form, and clean personal branding for freelance or collaboration opportunities.</p>
-		<div class="project-stack">
-			<span>Forms</span>
-			<span>Branding</span>
-			<span>Accessibility</span>
-			<span>User Flow</span>
-		</div>
-		<div class="project-actions">
-			<a href="contact.html" class="button">Contact Page</a>
-			<a href="contact.html" class="button project-secondary">Details</a>
-		</div>
-	</article>
-
-	<article class="project-card">
-		<div class="project-topline">
-			<span class="project-type">Creative Work</span>
-			<span class="project-year">2026</span>
-		</div>
-		<h2>Graphics And Video Editing</h2>
-		<p>Creative design work that supports digital storytelling, visual identity, and presentation. This includes graphic layouts, edited visuals, and multimedia content.</p>
-		<div class="project-stack">
-			<span>Photoshop</span>
-			<span>Illustrator</span>
-			<span>Premiere</span>
-			<span>CapCut</span>
-		</div>
-		<div class="project-actions">
-			<a href="contact.html" class="button">Request Work</a>
-			<a href="contact.html" class="button project-secondary">Portfolio Use</a>
-		</div>
-	</article>
-
-	<article class="project-card project-card-accent">
-		<div class="project-topline">
-			<span class="project-type">Student Project</span>
-			<span class="project-year">2026</span>
-		</div>
-		<h2>Responsive Web Practice</h2>
-		<p>A growing collection of practice pages and experiments built to improve layout control, interface consistency, coding confidence, and frontend problem solving.</p>
-		<div class="project-stack">
-			<span>Practice Builds</span>
-			<span>Mobile Friendly</span>
-			<span>Clean UI</span>
-			<span>Iteration</span>
-		</div>
-		<div class="project-actions">
-			<a href="index.html" class="button">See Portfolio</a>
-			<a href="contact.html" class="button project-secondary">More Soon</a>
-		</div>
-	</article>
-</section>
--->
-</section>
 <section class="hero-cta">
 	<h2>My Core Skills</h2>
 	<p class="hero-cta-description">A quick look at the tools and areas I use most in my work and learning journey.</p>
@@ -193,7 +300,7 @@ darkBtn.addEventListener("click", () => {
 		<span><i class="fab fa-html5"></i> HTML</span>
 		<span><i class="fab fa-css3-alt"></i> CSS</span>
 		<span><i class="fab fa-js"></i> JavaScript</span>
-		<span><i class="fab fa-php"></i>Php</span>
+		<span><i class="fab fa-php"></i> PHP</span>
 		<span><i class="fab fa-react"></i> React</span>
 		<span><i class="fab fa-git-alt"></i> Git</span>
 		<span><i class="fab fa-figma"></i> Figma</span>
@@ -206,16 +313,177 @@ darkBtn.addEventListener("click", () => {
 </section>
 
 <footer>
-	<p>&copy; 2026 Dagim Denecho. All rights reserved.</p>
-	<div class="social-links">
-		<a href="#" class="fab fa-facebook"></a>
-		<a href="#" class="fab fa-twitter"></a>
-		<a href="#" class="fab fa-linkedin"></a>
-		<a href="#" class="fab fa-github"></a>
+	<div class="footer-top">
+		<div class="footer-brand">
+			<h3>Dagim Denecho</h3>
+			<p>Full-Stack Web Developer</p>
+		</div>
+		<div class="footer-links">
+			<h4>Quick Links</h4>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about-me.html">About</a></li>
+				<li><a href="skill.html">Skills</a></li>
+				<li><a href="gallery.html">Projects</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<div class="footer-contact">
+			<h4>Contact</h4>
+			<p><i class="fas fa-envelope"></i> <a href="mailto:dagimdanecho344@gmail.com">dagimdanecho344@gmail.com</a></p>
+			<p><i class="fas fa-phone"></i> <a href="tel:+251986027835">+251 986 027 835</a></p>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<p>&copy; 2026 Dagim Denecho. All rights reserved.</p>
+		<div class="social-links">
+			<a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+			<a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+			<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+			<a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+		</div>
 	</div>
 </footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Back to top">
+	<i class="fas fa-arrow-up"></i>
+</button>
 
+<script>
+// Mobile Menu Toggle
+const toggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("nav ul");
 
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+
+// Dark Mode Toggle
+const darkBtn = document.getElementById("dark-mode");
+
+darkBtn.addEventListener("click", () => {
+	document.body.classList.toggle("dark-mode");
+	darkBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+});
+
+// Close mobile menu on link click
+document.querySelectorAll('nav ul li a').forEach(link => {
+	link.addEventListener('click', () => {
+		if (window.innerWidth <= 768) {
+			nav.classList.remove('active');
+		}
+	});
+});
+
+// Project Filtering
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(btn => {
+	btn.addEventListener('click', function() {
+		// Update active button
+		filterButtons.forEach(b => b.classList.remove('active'));
+		this.classList.add('active');
+		
+		const filter = this.getAttribute('data-filter');
+		
+		projectCards.forEach(card => {
+			const category = card.getAttribute('data-category');
+			if (filter === 'all' || category === filter) {
+				card.style.display = 'block';
+				setTimeout(() => {
+					card.style.opacity = '1';
+					card.style.transform = 'scale(1)';
+				}, 50);
+			} else {
+				card.style.opacity = '0';
+				card.style.transform = 'scale(0.8)';
+				setTimeout(() => {
+					card.style.display = 'none';
+				}, 300);
+			}
+		});
+	});
+});
+
+// Animated Stats Counter
+const stats = document.querySelectorAll('.stat-number');
+
+const animateStats = () => {
+	stats.forEach(stat => {
+		const target = parseInt(stat.getAttribute('data-target'));
+		const current = parseInt(stat.textContent);
+		const increment = Math.ceil(target / 50);
+		
+		if (current < target) {
+			const newValue = Math.min(current + increment, target);
+			stat.textContent = newValue;
+			setTimeout(animateStats, 30);
+		}
+	});
+};
+
+// Start stats animation when visible
+const statsObserver = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			stats.forEach(stat => stat.textContent = '0');
+			animateStats();
+		}
+	});
+}, {
+	threshold: 0.5
+});
+
+document.querySelector('.stats-grid').forEach?.(el => {
+	if (el) statsObserver.observe(el);
+});
+
+// Back to Top Button
+const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+	if (window.scrollY > 300) {
+		backToTopBtn.classList.add('visible');
+	} else {
+		backToTopBtn.classList.remove('visible');
+	}
+});
+
+backToTopBtn.addEventListener('click', () => {
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Scroll Reveal Animation
+const revealElements = document.querySelectorAll('.project-card, .project-highlight-card, .stat-item');
+
+const revealObserver = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('revealed');
+		}
+	});
+}, {
+	threshold: 0.1,
+	rootMargin: '0px 0px -30px 0px'
+});
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+// Add smooth scroll to all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function(e) {
+		const href = this.getAttribute('href');
+		if (href !== '#') {
+			e.preventDefault();
+			const target = document.querySelector(href);
+			if (target) {
+				target.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	});
+});
+</script>
 </body>
 </html>
