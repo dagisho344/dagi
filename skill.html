@@ -5,51 +5,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="MYpersonal.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	<title>Skill Page</title>
+	<title>Skills | Dagim Danecho</title>
 </head>
 <body class="inner-page skill-page">
 <header class="hero-banner">
 	<h1 id="Welcome">Welcome To My Portfolio</h1>
 	<p class="subheading">Explore my technical strengths and creative abilities.</p>
+	<div class="scroll-indicator">
+		<span>Discover My Skills</span>
+		<i class="fas fa-chevron-down"></i>
+	</div>
 </header>
 
-<nav><button id="menu-toggle">&#9776;</button><button id="dark-mode">&#127769;</button>
+<nav>
+	<button id="menu-toggle" aria-label="Toggle menu">☰</button>
+	<button id="dark-mode" aria-label="Toggle dark mode">🌙</button>
 	<ul>
 		<li><a href="index.html">Home</a></li>
 		<li><a href="about-me.html">About Me</a></li>
-		<li><a href="skill.html">Skills</a></li>
+		<li><a href="skill.html" class="active">Skills</a></li>
 		<li><a href="gallery.html">Projects</a></li>
 		<li><a href="contact.html">Contact</a></li>
 	</ul>
 </nav>
 
-<script>
-const toggle = document.getElementById("menu-toggle");
-const nav = document.querySelector("nav ul");
-
-toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
-
-const darkBtn = document.getElementById("dark-mode");
-
-darkBtn.addEventListener("click", () => {
-	document.body.classList.toggle("dark-mode");
-});
-</script>
-
 <section class="skills-hero">
 	<div class="skills-hero-text">
-		<p class="skills-tag"><!--Computer Science Student-->My Profile</p>
+		<p class="skills-tag"><i class="fas fa-star"></i> My Profile</p>
 		<h1 class="mysikll">My Skills</h1>
 		<p class="skills-intro">I am building a strong foundation in Full-Stack with practical experience in web development, software tools, problem solving, and digital creativity. This page highlights the core skills and the areas I continue to grow in.</p>
 		<div class="skills-summary">
-			<span>Programming</span>
-			<!--<span>Data Structures</span>-->
-			<span>Databases</span>
-			<!--<span>Networking</span>-->
-			<span>UI Design</span>
-			<span>Creative Tools</span>
+			<span><i class="fas fa-code"></i> Programming</span>
+			<span><i class="fas fa-database"></i> Databases</span>
+			<span><i class="fas fa-paint-brush"></i> UI Design</span>
+			<span><i class="fas fa-tools"></i> Creative Tools</span>
 		</div>
 	</div>
 	<div class="skills-hero-photo">
@@ -57,117 +46,425 @@ darkBtn.addEventListener("click", () => {
 	</div>
 </section>
 
+<!-- Skill Level Overview -->
+<section class="skill-overview">
+	<div class="container">
+		<div class="overview-grid">
+			<div class="overview-item">
+				<div class="overview-icon">
+					<i class="fas fa-code"></i>
+				</div>
+				<div class="overview-info">
+					<h3>Frontend Development</h3>
+					<div class="skill-level">
+						<div class="skill-level-bar" style="width: 78%"></div>
+					</div>
+					<span class="skill-percentage">78%</span>
+				</div>
+			</div>
+			<div class="overview-item">
+				<div class="overview-icon">
+					<i class="fas fa-server"></i>
+				</div>
+				<div class="overview-info">
+					<h3>Backend Development</h3>
+					<div class="skill-level">
+						<div class="skill-level-bar" style="width: 62%"></div>
+					</div>
+					<span class="skill-percentage">62%</span>
+				</div>
+			</div>
+			<div class="overview-item">
+				<div class="overview-icon">
+					<i class="fas fa-database"></i>
+				</div>
+				<div class="overview-info">
+					<h3>Database Management</h3>
+					<div class="skill-level">
+						<div class="skill-level-bar" style="width: 55%"></div>
+					</div>
+					<span class="skill-percentage">55%</span>
+				</div>
+			</div>
+			<div class="overview-item">
+				<div class="overview-icon">
+					<i class="fas fa-paint-brush"></i>
+				</div>
+				<div class="overview-info">
+					<h3>UI/UX Design</h3>
+					<div class="skill-level">
+						<div class="skill-level-bar" style="width: 70%"></div>
+					</div>
+					<span class="skill-percentage">70%</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 <section class="skills-board">
 	<article class="skill-category-card">
-		<h2><i class="fa-solid fa-code"></i> Programming Fundamentals</h2>
+		<div class="category-header">
+			<h2><i class="fa-solid fa-code"></i> Programming Fundamentals</h2>
+			<span class="category-badge">Core</span>
+		</div>
 		<p>Writing clean logic, understanding syntax, debugging errors, and solving coding problems step by step.</p>
 		<div class="skills-grid custom-skills-grid">
-			<div class="skill-card"><div class="skill-title"><i class="fa-brands fa-html5"></i> HTML</div><div class="progress-bar"><div class="progress" style="width:88%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-brands fa-css3-alt"></i> CSS</div><div class="progress-bar"><div class="progress" style="width:80%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-brands fa-js"></i> JavaScript</div><div class="progress-bar"><div class="progress" style="width:58%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-laptop-code"></i> C++ / Java Basics</div><div class="progress-bar"><div class="progress" style="width:62%"></div></div></div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-brands fa-html5"></i> HTML</div>
+				<div class="progress-bar"><div class="progress" data-width="88"></div></div>
+				<span class="skill-value">88%</span>
+			</div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+				<div class="progress-bar"><div class="progress" data-width="80"></div></div>
+				<span class="skill-value">80%</span>
+			</div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-brands fa-js"></i> JavaScript</div>
+				<div class="progress-bar"><div class="progress" data-width="58"></div></div>
+				<span class="skill-value">58%</span>
+			</div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-solid fa-laptop-code"></i> C++ / Java Basics</div>
+				<div class="progress-bar"><div class="progress" data-width="62"></div></div>
+				<span class="skill-value">62%</span>
+			</div>
 		</div>
+		
 		<h2><i class="fa-solid fa-toolbox"></i> Productivity And Tools</h2>
 		<p>Tools that support studying, development work, and project delivery.</p>
 		<div class="skills-grid custom-skills-grid">
-			<div class="skill-card"><div class="skill-title"><i class="fa-brands fa-git-alt"></i> Git Basics</div><div class="progress-bar"><div class="progress" style="width:60%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-file-code"></i> VS Code</div><div class="progress-bar"><div class="progress" style="width:82%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-palette"></i> Figma Basics</div><div class="progress-bar"><div class="progress" style="width:65%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-terminal"></i> Command Line</div><div class="progress-bar"><div class="progress" style="width:55%"></div></div></div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-brands fa-git-alt"></i> Git Basics</div>
+				<div class="progress-bar"><div class="progress" data-width="60"></div></div>
+				<span class="skill-value">60%</span>
+			</div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-solid fa-file-code"></i> VS Code</div>
+				<div class="progress-bar"><div class="progress" data-width="82"></div></div>
+				<span class="skill-value">82%</span>
+			</div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-solid fa-palette"></i> Figma Basics</div>
+				<div class="progress-bar"><div class="progress" data-width="65"></div></div>
+				<span class="skill-value">65%</span>
+			</div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-solid fa-terminal"></i> Command Line</div>
+				<div class="progress-bar"><div class="progress" data-width="55"></div></div>
+				<span class="skill-value">55%</span>
+			</div>
 		</div>
 	</article>
 
-	<!--<article class="skill-category-card">
-		<h2><i class="fa-solid fa-sitemap"></i> Core Computer Science</h2>
-		<p>Important concepts every Full-Stack Devloper studies to understand how software and systems work.</p>
-		<div class="custom-skill-list">
-			<span>Data Structures</span>
-			<span>Algorithms</span>
-			<span>Object-Oriented Programming</span>
-			<span>Operating Systems Basics</span>
-			<span>Computer Networks</span>
-			<span>Database Concepts</span>
-			<span>Software Engineering</span>
-			<span>System Analysis</span>
-		</div>
-	</article>-->
-
 	<article class="skill-category-card">
-		<h2><i class="fa-solid fa-globe"></i> Web Development Skills</h2>
+		<div class="category-header">
+			<h2><i class="fa-solid fa-globe"></i> Web Development Skills</h2>
+			<span class="category-badge">Advanced</span>
+		</div>
 		<p>Building modern full-stack web apps with the kind of tools and workflows widely used in 2026, from frontend UI systems to backend APIs and deployment-ready project structure.</p>
 		<div class="custom-skill-list">
-			<span>React</span>
-			<span>Next.js App Router</span>
-			<span>TypeScript</span>
-			<span>Tailwind CSS</span>
-			<span>REST API Integration</span>
-			<span>Responsive UI</span>
-			<span>Authentication Basics</span>
-			<span>Performance Optimization</span>
+			<span><i class="fab fa-react"></i> React</span>
+			<span><i class="fas fa-layer-group"></i> Next.js App Router</span>
+			<span><i class="fas fa-code"></i> TypeScript</span>
+			<span><i class="fab fa-tailwind"></i> Tailwind CSS</span>
+			<span><i class="fas fa-plug"></i> REST API Integration</span>
+			<span><i class="fas fa-mobile-alt"></i> Responsive UI</span>
+			<span><i class="fas fa-lock"></i> Authentication Basics</span>
+			<span><i class="fas fa-tachometer-alt"></i> Performance Optimization</span>
 		</div>
 		<div class="skills-grid custom-skills-grid">
-			<div class="skill-card"><div class="skill-title"><i class="fa-brands fa-react"></i> React Components</div><div class="progress-bar"><div class="progress" style="width:70%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-layer-group"></i> Next.js Full-Stack Apps</div><div class="progress-bar"><div class="progress" style="width:64%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-code"></i> TypeScript Basics</div><div class="progress-bar"><div class="progress" style="width:55%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-paintbrush"></i> Tailwind And UI Styling</div><div class="progress-bar"><div class="progress" style="width:68%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-plug"></i> APIs And Data Fetching</div><div class="progress-bar"><div class="progress" style="width:66%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-rocket"></i> Deploy And Optimize</div><div class="progress-bar"><div class="progress" style="width:60%"></div></div></div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-brands fa-react"></i> React Components</div>
+				<div class="progress-bar"><div class="progress" data-width="70"></div></div>
+				<span class="skill-value">70%</span>
+			</div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-solid fa-layer-group"></i> Next.js Full-Stack Apps</div>
+				<div class="progress-bar"><div class="progress" data-width="64"></div></div>
+				<span class="skill-value">64%</span>
+			</div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-solid fa-code"></i> TypeScript Basics</div>
+				<div class="progress-bar"><div class="progress" data-width="55"></div></div>
+				<span class="skill-value">55%</span>
+			</div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-solid fa-paintbrush"></i> Tailwind And UI Styling</div>
+				<div class="progress-bar"><div class="progress" data-width="68"></div></div>
+				<span class="skill-value">68%</span>
+			</div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-solid fa-plug"></i> APIs And Data Fetching</div>
+				<div class="progress-bar"><div class="progress" data-width="66"></div></div>
+				<span class="skill-value">66%</span>
+			</div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fa-solid fa-rocket"></i> Deploy And Optimize</div>
+				<div class="progress-bar"><div class="progress" data-width="60"></div></div>
+				<span class="skill-value">60%</span>
+			</div>
 		</div>
 	</article>
 
 	<article class="skill-category-card">
-		<h2><i class="fa-solid fa-database"></i> Databases And Data</h2>
+		<div class="category-header">
+			<h2><i class="fa-solid fa-database"></i> Databases And Data</h2>
+			<span class="category-badge">Intermediate</span>
+		</div>
 		<p>Understanding how information is stored, organized, queried, and managed in software systems.</p>
 		<div class="custom-skill-list">
-			<span>SQL Basics</span>
-			<span>Tables and Relationships</span>
-			<span>ER Diagrams</span>
-			<span>Normalization Basics</span>
-			<span>Data Entry Forms</span>
-			<span>Information Management</span>
+			<span><i class="fas fa-database"></i> SQL Basics</span>
+			<span><i class="fas fa-table"></i> Tables and Relationships</span>
+			<span><i class="fas fa-project-diagram"></i> ER Diagrams</span>
+			<span><i class="fas fa-sort-amount-up"></i> Normalization Basics</span>
+			<span><i class="fas fa-edit"></i> Data Entry Forms</span>
+			<span><i class="fas fa-info-circle"></i> Information Management</span>
+		</div>
+		<div class="skills-grid custom-skills-grid">
+			<div class="skill-card">
+				<div class="skill-title"><i class="fas fa-database"></i> SQL Queries</div>
+				<div class="progress-bar"><div class="progress" data-width="50"></div></div>
+				<span class="skill-value">50%</span>
+			</div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fas fa-table"></i> Database Design</div>
+				<div class="progress-bar"><div class="progress" data-width="45"></div></div>
+				<span class="skill-value">45%</span>
+			</div>
+			<div class="skill-card">
+				<div class="skill-title"><i class="fas fa-link"></i> Data Relationships</div>
+				<div class="progress-bar"><div class="progress" data-width="48"></div></div>
+				<span class="skill-value">48%</span>
+			</div>
 		</div>
 	</article>
-
-	<!--<article class="skill-category-card">
-		<h2><i class="fa-solid fa-toolbox"></i> Productivity And Tools</h2>
-		<p>Tools that support studying, development work, and project delivery.</p>
-		<div class="skills-grid custom-skills-grid">
-			<div class="skill-card"><div class="skill-title"><i class="fa-brands fa-git-alt"></i> Git Basics</div><div class="progress-bar"><div class="progress" style="width:60%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-file-code"></i> VS Code</div><div class="progress-bar"><div class="progress" style="width:82%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-palette"></i> Figma Basics</div><div class="progress-bar"><div class="progress" style="width:65%"></div></div></div>
-			<div class="skill-card"><div class="skill-title"><i class="fa-solid fa-terminal"></i> Command Line</div><div class="progress-bar"><div class="progress" style="width:55%"></div></div></div>
-		</div>
-	</article>-->
 </section>
-	<section class="hero-cta">
+
+<!-- Skill Certification Section -->
+<section class="certification-section">
+	<div class="container">
+		<div class="section-header">
+			<span class="section-tag">Certifications</span>
+			<h2>Learning & Certifications</h2>
+		</div>
+		<div class="cert-grid">
+			<div class="cert-item">
+				<i class="fas fa-certificate"></i>
+				<div class="cert-info">
+					<h3>Web Development</h3>
+					<p>Frontend & Backend Fundamentals</p>
+					<span class="cert-status">In Progress</span>
+				</div>
+			</div>
+			<div class="cert-item">
+				<i class="fas fa-certificate"></i>
+				<div class="cert-info">
+					<h3>JavaScript</h3>
+					<p>Advanced JavaScript Concepts</p>
+					<span class="cert-status">In Progress</span>
+				</div>
+			</div>
+			<div class="cert-item">
+				<i class="fas fa-certificate"></i>
+				<div class="cert-info">
+					<h3>React & Next.js</h3>
+					<p>Modern React Development</p>
+					<span class="cert-status">Planned</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="hero-cta">
 	<h2>My Core Skills</h2>
 	<p class="hero-cta-description">A quick look at the tools and areas I use most in my work and learning journey.</p>
 	<div class="skill-badges">
 		<span><i class="fab fa-html5"></i> HTML</span>
 		<span><i class="fab fa-css3-alt"></i> CSS</span>
 		<span><i class="fab fa-js"></i> JavaScript</span>
-		<span><i class="fab fa-php"></i>Php</span>
+		<span><i class="fab fa-php"></i> PHP</span>
 		<span><i class="fab fa-react"></i> React</span>
 		<span><i class="fab fa-git-alt"></i> Git</span>
 		<span><i class="fab fa-figma"></i> Figma</span>
 	</div>
 	<div class="cta-buttons">
 		<a href="index.html" class="button">Back to Home</a>
-		<a href="skill.html" class="button">View Skills</a>
+		<a href="about-me.html" class="button">About Me</a>
 		<a href="contact.html" class="button">Contact Me</a>
 	</div>
 </section>
 
 <footer>
-	<p>&copy; 2026 Dagim Denecho. All rights reserved.</p>
-	<div class="social-links">
-		<a href="#" class="fab fa-facebook"></a>
-		<a href="#" class="fab fa-twitter"></a>
-		<a href="#" class="fab fa-linkedin"></a>
-		<a href="#" class="fab fa-github"></a>
+	<div class="footer-top">
+		<div class="footer-brand">
+			<h3>Dagim Denecho</h3>
+			<p>Full-Stack Web Developer</p>
+		</div>
+		<div class="footer-links">
+			<h4>Quick Links</h4>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about-me.html">About</a></li>
+				<li><a href="skill.html">Skills</a></li>
+				<li><a href="gallery.html">Projects</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<div class="footer-contact">
+			<h4>Contact</h4>
+			<p><i class="fas fa-envelope"></i> <a href="mailto:dagimdanecho344@gmail.com">dagimdanecho344@gmail.com</a></p>
+			<p><i class="fas fa-phone"></i> <a href="tel:+251986027835">+251 986 027 835</a></p>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<p>&copy; 2026 Dagim Denecho. All rights reserved.</p>
+		<div class="social-links">
+			<a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+			<a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+			<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+			<a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+		</div>
 	</div>
 </footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Back to top">
+	<i class="fas fa-arrow-up"></i>
+</button>
 
+<script>
+// Mobile Menu Toggle
+const toggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("nav ul");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+
+// Dark Mode Toggle
+const darkBtn = document.getElementById("dark-mode");
+
+darkBtn.addEventListener("click", () => {
+	document.body.classList.toggle("dark-mode");
+	darkBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+});
+
+// Close mobile menu on link click
+document.querySelectorAll('nav ul li a').forEach(link => {
+	link.addEventListener('click', () => {
+		if (window.innerWidth <= 768) {
+			nav.classList.remove('active');
+		}
+	});
+});
+
+// Animated Progress Bars
+const progressBars = document.querySelectorAll('.progress');
+
+const animateProgressBars = () => {
+	progressBars.forEach(bar => {
+		const width = bar.getAttribute('data-width');
+		bar.style.width = width + '%';
+	});
+};
+
+// Start progress animation when visible
+const progressObserver = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			// Reset progress bars
+			progressBars.forEach(bar => bar.style.width = '0%');
+			// Animate them
+			setTimeout(animateProgressBars, 300);
+		}
+	});
+}, {
+	threshold: 0.3
+});
+
+document.querySelectorAll('.skill-category-card').forEach(el => {
+	progressObserver.observe(el);
+});
+
+// Back to Top Button
+const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+	if (window.scrollY > 300) {
+		backToTopBtn.classList.add('visible');
+	} else {
+		backToTopBtn.classList.remove('visible');
+	}
+});
+
+backToTopBtn.addEventListener('click', () => {
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Scroll Reveal Animation
+const revealElements = document.querySelectorAll('.skill-card, .cert-item, .overview-item');
+
+const revealObserver = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('revealed');
+		}
+	});
+}, {
+	threshold: 0.1,
+	rootMargin: '0px 0px -30px 0px'
+});
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+// Add smooth scroll to all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function(e) {
+		const href = this.getAttribute('href');
+		if (href !== '#') {
+			e.preventDefault();
+			const target = document.querySelector(href);
+			if (target) {
+				target.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	});
+});
+
+// Skill hover animation
+document.querySelectorAll('.skill-card').forEach(card => {
+	card.addEventListener('mouseenter', function() {
+		const progress = this.querySelector('.progress');
+		const currentWidth = progress.style.width;
+		progress.style.width = '0%';
+		setTimeout(() => {
+			progress.style.width = currentWidth;
+		}, 100);
+	});
+});
+
+// Overview skill bars animation
+const overviewBars = document.querySelectorAll('.skill-level-bar');
+
+const overviewObserver = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			const bar = entry.target;
+			const width = bar.style.width;
+			bar.style.width = '0%';
+			setTimeout(() => {
+				bar.style.width = width;
+			}, 200);
+		}
+	});
+}, {
+	threshold: 0.5
+});
+
+overviewBars.forEach(bar => overviewObserver.observe(bar));
+</script>
 </body>
 </html>
