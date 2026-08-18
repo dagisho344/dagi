@@ -6,8 +6,17 @@
 	<link rel="stylesheet" href="MYpersonal.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<title>Projects | Dagim Danecho</title>
+	<style>
+		/* PATCH: Make text visible against the dark blue background */
+		.projects-title, .projects-intro, .projects-tags span,
+		.project-highlight-card h2, .project-highlight-card p, .project-metrics span,
+		.project-content h2, .project-content p, .project-stack span, .stat-item .stat-label,
+		.hero-cta h2, .hero-cta-description, .footer-top, .footer-bottom p {
+			color: #ffd700 !important;
+		}
+	</style>
 </head>
-<body class="inner-page projects-page">
+<body class="projects-page">
 <header class="hero-banner">
 	<h1 id="Welcome">Welcome To My Portfolio</h1>
 	<p class="subheading">A focused view of the websites, creative work, and digital solutions I am building.</p>
@@ -18,8 +27,8 @@
 </header>
 
 <nav>
-	<button id="menu-toggle" aria-label="Toggle menu">☰</button>
-	<button id="dark-mode" aria-label="Toggle dark mode">🌙</button>
+	<button id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+	<button id="dark-mode" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
 	<ul>
 		<li><a href="index.html">Home</a></li>
 		<li><a href="about-me.html">About Me</a></li>
@@ -364,7 +373,12 @@ const darkBtn = document.getElementById("dark-mode");
 
 darkBtn.addEventListener("click", () => {
 	document.body.classList.toggle("dark-mode");
-	darkBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+	const icon = darkBtn.querySelector('i');
+	if (document.body.classList.contains("dark-mode")) {
+		icon.className = 'fas fa-sun';
+	} else {
+		icon.className = 'fas fa-moon';
+	}
 });
 
 // Close mobile menu on link click
@@ -382,7 +396,6 @@ const projectCards = document.querySelectorAll('.project-card');
 
 filterButtons.forEach(btn => {
 	btn.addEventListener('click', function() {
-		// Update active button
 		filterButtons.forEach(b => b.classList.remove('active'));
 		this.classList.add('active');
 		
@@ -424,7 +437,6 @@ const animateStats = () => {
 	});
 };
 
-// Start stats animation when visible
 const statsObserver = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
