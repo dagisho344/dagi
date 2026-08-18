@@ -6,6 +6,17 @@
 	<link rel="stylesheet" href="MYpersonal.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<title>About Me | Dagim Danecho</title>
+	<style>
+		/* PATCH: Make text visible against the dark blue background without using white */
+		.about_me h1, .about_me h2, .about_me p, .about_me blockquote,
+		.hero-cta h2, .hero-cta-description, .footer-top, .footer-bottom p, .fun-facts h2, .fun-facts p {
+			color: #ffd700 !important; /* Gold text for readability */
+		}
+		#dagi { color: #00d4ff !important; } /* Cyan highlight */
+		.hero-banner h1, .hero-banner .subheading, .scroll-indicator {
+			color: #ffd700 !important; 
+		}
+	</style>
 </head>
 <body>
 <header class="hero-banner">
@@ -262,7 +273,6 @@ const darkBtn = document.getElementById("dark-mode");
 
 darkBtn.addEventListener("click", () => {
 	document.body.classList.toggle("dark-mode");
-	// Using icons instead of text/emoji for better visibility
 	const icon = darkBtn.querySelector('i');
 	if (document.body.classList.contains("dark-mode")) {
 		icon.className = 'fas fa-sun';
@@ -373,7 +383,6 @@ if (subtitle) {
 			setTimeout(typeSubtitle, 30);
 		}
 	};
-	// Only run if not already typed (check if text exists)
 	if (text) {
 		setTimeout(typeSubtitle, 500);
 	}
