@@ -1,378 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact | Dagim Danecho</title>
-  <link rel="stylesheet" href="MYpersonal.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-	/* PATCH: Make text visible against the dark blue background */
-	.contact-header h2, .contact-header p, .contact-details a, .contact-details span,
-	.form-header h2, .form-header p, .faq-section h2, .faq-question span, .faq-answer p,
-	.availability-content h2, .availability-content p, .availability-badge span:last-child {
-		color: #ffd700 !important; 
-	}
-  </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Contact Dagim Denecho for full-stack web development work.">
+	<link rel="stylesheet" href="MYpersonal.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<title>Contact | Dagim Denecho</title>
 </head>
-
 <body>
-
-<header class="hero-banner">
-  <h1>Welcome To My Portfolio</h1>
-  <p class="subheading">Let's connect and bring your ideas to life</p>
-  <div class="scroll-indicator">
-    <span>Get in Touch</span>
-    <i class="fas fa-chevron-down"></i>
-  </div>
+<header class="site-header">
+	<a class="brand logo-brand" href="index.html"><img src="assets/dagi-logo.png" alt="Dagi Sho344 logo"><span class="brand-text">Dagim Denecho</span></a>
+	<nav class="site-nav" aria-label="Main navigation">
+		<button id="menu-toggle" class="icon-button" type="button" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about-me.html">About</a></li>
+			<li><a href="skill.html">Skills</a></li>
+			<li><a href="gallery.html">Projects</a></li>
+			<li><a href="certificates.html">Certificates</a></li>
+			<li><a href="contact.html" class="active">Contact</a></li>
+		</ul>
+	</nav>
+	<button id="dark-mode" class="icon-button" type="button" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
 </header>
 
-<nav>
-  <button id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
-  <button id="dark-mode" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about-me.html">About Me</a></li>
-    <li><a href="skill.html">Skills</a></li>
-    <li><a href="gallery.html">Projects</a></li>
-    <li><a href="contact.html" class="active">Contact</a></li>
-  </ul>
-</nav>
+<main>
+	<section class="page-hero reveal">
+		<p class="eyebrow">Contact</p>
+		<h1>Let us build something useful.</h1>
+		<p>Send a message for web development, portfolio, project demo, or collaboration requests.</p>
+	</section>
 
-<!-- CONTACT SECTION -->
-<section id="contact">
-  <div class="contact-container">
-    <div class="contact-header">
-      <span class="section-tag">Get in Touch</span>
-      <h2>Let's Work Together</h2>
-      <p>Have a project in mind or want to collaborate? I'd love to hear from you!</p>
-    </div>
-    
-    <div class="contact-grid">
-      <!-- Contact Information Cards -->
-      <div class="contact-info">
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fab fa-telegram"></i>
-          </div>
-          <div class="contact-details">
-            <h3>Telegram</h3>
-            <a href="https://t.me/dagisho344" target="_blank">@dagisho344</a>
-          </div>
-        </div>
+	<section class="contact-layout reveal">
+		<div class="contact-card">
+			<h2>Direct Links</h2>
+			<a href="https://t.me/dagisho344" target="_blank" rel="noreferrer"><i class="fab fa-telegram"></i> Telegram</a>
+			<a href="mailto:dagimdanecho344@gmail.com"><i class="fa-solid fa-envelope"></i> dagimdanecho344@gmail.com</a>
+			<a href="tel:+251986027835"><i class="fa-solid fa-phone"></i> +251 986 027 835</a>
+		</div>
+		<form class="contact-form" action="https://formspree.io/f/xeevpelv" method="POST">
+			<h2>Send Me a Message</h2>
+			<label for="name">Name</label>
+			<input id="name" type="text" name="name" placeholder="Your name" required>
+			<label for="email">Email</label>
+			<input id="email" type="email" name="email" placeholder="your@email.com" required>
+			<label for="message">Message</label>
+			<textarea id="message" name="message" placeholder="Tell me about your project" rows="5" required></textarea>
+			<button class="button primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+		</form>
+	</section>
+</main>
 
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="contact-details">
-            <h3>Email</h3>
-            <a href="mailto:dagimdanecho344@gmail.com">dagimdanecho344@gmail.com</a>
-          </div>
-        </div>
+<footer class="site-footer">
+	<p>&copy; 2026 Dagim Denecho. Full-Stack Web Developer.</p>
+	<div class="social-links">
+		<a href="mailto:dagimdanecho344@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+		<a href="https://t.me/dagisho344" target="_blank" rel="noreferrer" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+		<a href="contact.html" aria-label="Contact"><i class="fa-solid fa-address-card"></i></a>
+	</div>
+</footer>
 
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-phone"></i>
-          </div>
-          <div class="contact-details">
-            <h3>Phone</h3>
-            <a href="tel:+251986027835">+251 986 027 835</a>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div class="contact-details">
-            <h3>Location</h3>
-            <span>Ethiopia</span>
-          </div>
-        </div>
-
-        <!-- Social Links -->
-        <div class="contact-social">
-          <h3>Connect With Me</h3>
-          <div class="social-icons">
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Contact Form -->
-      <div class="contact-form-wrapper">
-        <div class="form-header">
-          <h2>Send Me a Message</h2>
-          <p>I'll get back to you within 24 hours</p>
-        </div>
-        
-        <form action="https://formspree.io/f/xeevpelv" method="POST" id="contactForm">
-          <div class="form-group">
-            <div class="input-icon">
-              <i class="fas fa-user"></i>
-            </div>
-            <input type="text" name="name" placeholder="Your Name" required>
-          </div>
-
-          <div class="form-group">
-            <div class="input-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <input type="email" name="email" placeholder="Your Email" required>
-          </div>
-
-          <div class="form-group">
-            <div class="input-icon">
-              <i class="fas fa-tag"></i>
-            </div>
-            <input type="text" name="subject" placeholder="Subject">
-          </div>
-
-          <div class="form-group">
-            <div class="input-icon">
-              <i class="fas fa-comment"></i>
-            </div>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="submit-btn">
-              <i class="fas fa-paper-plane"></i>
-              Send Message
-            </button>
-            <div id="formStatus"></div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Availability Section -->
-<section class="availability-section">
-  <div class="container">
-    <div class="availability-content">
-      <div class="availability-icon">
-        <i class="fas fa-clock"></i>
-      </div>
-      <div>
-        <h2>Available for Freelance Projects</h2>
-        <p>I'm currently open to new opportunities and collaborations</p>
-        <div class="availability-badge">
-          <span class="status-dot"></span>
-          <span>Available Now</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="faq-section">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">FAQ</span>
-      <h2>Frequently Asked Questions</h2>
-    </div>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>How long does it take to build a website?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>Timeline depends on the project complexity. A simple portfolio takes 1-2 weeks, while complex web applications may take 4-8 weeks. I'll provide a detailed timeline after discussing your requirements.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>Do you offer support after project completion?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>Yes! I provide 30 days of free support after project completion. Extended maintenance packages are also available for ongoing support and updates.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>What technologies do you specialize in?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>I specialize in HTML, CSS, JavaScript, React, PHP, and modern web frameworks. I also integrate AI features and work with various databases and cloud platforms.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          <span>How much do you charge for a project?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>Pricing depends on the project scope, complexity, and timeline. I offer competitive rates and provide a detailed quote after understanding your project requirements.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Back to Top Button -->
-<button id="backToTop" aria-label="Back to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
-<script>
-// Mobile Menu Toggle
-const toggle = document.getElementById("menu-toggle");
-const nav = document.querySelector("nav ul");
-
-toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
-
-// Dark Mode Toggle
-const darkBtn = document.getElementById("dark-mode");
-
-darkBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  const icon = darkBtn.querySelector('i');
-  if (document.body.classList.contains("dark-mode")) {
-    icon.className = 'fas fa-sun';
-  } else {
-    icon.className = 'fas fa-moon';
-  }
-});
-
-// Close mobile menu on link click
-document.querySelectorAll('nav ul li a').forEach(link => {
-  link.addEventListener('click', () => {
-    if (window.innerWidth <= 768) {
-      nav.classList.remove('active');
-    }
-  });
-});
-
-// Contact Form Handler with Animation
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const submitBtn = this.querySelector('.submit-btn');
-  const formStatus = document.getElementById('formStatus');
-  
-  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-  submitBtn.disabled = true;
-  
-  setTimeout(() => {
-    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-    submitBtn.style.background = '#33FF57';
-    submitBtn.style.color = '#1a1a2e';
-    
-    formStatus.innerHTML = '<div class="success-message">✅ Thank you! Your message has been sent successfully.</div>';
-    formStatus.style.color = '#33FF57';
-    
-    setTimeout(() => {
-      this.reset();
-      submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-      submitBtn.style.background = '';
-      submitBtn.style.color = '';
-      submitBtn.disabled = false;
-      
-      setTimeout(() => {
-        formStatus.innerHTML = '';
-      }, 3000);
-    }, 3000);
-    
-  }, 1500);
-});
-
-// FAQ Toggle
-function toggleFAQ(element) {
-  const item = element.parentElement;
-  const answer = item.querySelector('.faq-answer');
-  const icon = item.querySelector('.fa-chevron-down');
-  
-  document.querySelectorAll('.faq-item').forEach(otherItem => {
-    if (otherItem !== item) {
-      otherItem.classList.remove('active');
-      otherItem.querySelector('.faq-answer').style.maxHeight = '0';
-      otherItem.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
-    }
-  });
-  
-  item.classList.toggle('active');
-  if (item.classList.contains('active')) {
-    answer.style.maxHeight = answer.scrollHeight + 'px';
-    icon.style.transform = 'rotate(180deg)';
-  } else {
-    answer.style.maxHeight = '0';
-    icon.style.transform = 'rotate(0deg)';
-  }
-}
-
-// Back to Top Button
-const backToTopBtn = document.getElementById('backToTop');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.classList.add('visible');
-  } else {
-    backToTopBtn.classList.remove('visible');
-  }
-});
-
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// Scroll Reveal Animation
-const revealElements = document.querySelectorAll('.contact-card, .faq-item, .availability-content');
-
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('revealed');
-    }
-  });
-}, {
-  threshold: 0.1,
-  rootMargin: '0px 0px -30px 0px'
-});
-
-revealElements.forEach(el => revealObserver.observe(el));
-
-// Add smooth scroll to all anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const href = this.getAttribute('href');
-    if (href !== '#') {
-      e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  });
-});
-
-// Input focus animations
-document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
-  input.addEventListener('focus', function() {
-    this.parentElement.classList.add('focused');
-  });
-  
-  input.addEventListener('blur', function() {
-    if (!this.value) {
-      this.parentElement.classList.remove('focused');
-    }
-  });
-});
-</script>
+<script src="script.js"></script>
 </body>
 </html>
+
+
